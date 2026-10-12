@@ -1,6 +1,6 @@
 # Tag must track the root package.json `packageManager` version. ${BUILDPLATFORM}
 # keeps the binary's arch aligned with the builder stage on cross-arch builds.
-FROM --platform=${BUILDPLATFORM} ghcr.io/pnpm/pnpm:12.9.1@sha256:77123fd40a39db0eb8be6bddfcf0cea15e000122b9221ccce2e4415be29050f2 AS pnpm
+FROM --platform=${BUILDPLATFORM} ghcr.io/pnpm/pnpm:12.12.1@sha256:150c9372f3a6d02039f11dc7d1f6070896567038968c97bbb224e3b03ee3cbcc AS pnpm
 
 FROM --platform=${BUILDPLATFORM} docker.io/library/node:26.11.1-trixie@sha256:32fa97f3363975684b08bf4e8a68a47c7905175cc20275b50b974bbd02aba731 AS docs-builder
 
